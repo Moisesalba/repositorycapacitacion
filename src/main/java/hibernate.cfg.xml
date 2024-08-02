@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="queries">
+  <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+  <property name="hibernate.connection.password">Asdjkl_123</property>
+  <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+  <property name="hibernate.connection.username">System</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+  <!--4  PROPIEDADDES ADICIONALES -->
+  <property name="hibernate.pool_size">2</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.current_session_context_class">thread</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  
+  <!-- MAPPING -->
+  <mapping class="org.modelo.producto.Producto"/>
+ </session-factory>
+</hibernate-configuration>
